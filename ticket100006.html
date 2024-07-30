@@ -1,0 +1,2174 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://oncserver1.xyz/onlinetambola.xyz/Ui/userUi/js/audioAnnouncementLisenner.js"></script>
+
+
+
+
+
+<div class="titleDiv" >
+    <img class="titleImgL" style="display: none;" src="https:localhost/starttambola.com/themeStore/db/1000/img"/>
+    <img class="titleImgR" style="display: none;" src="https://www.fun-lover.com/mirrors/0i4i/theme/west2/png/hdrs1.png"/>
+    <img class="bannerImg" src="https://starttambola.com/publish/themeStore/db/100006/img/banner_regular.png"/>
+    <br>
+    <button class="titleBtn">*JACKPOT*</button>
+    <button class="titleBtn" id="titleBtn" style="background: rgb(255, 0, 221);display: none;"></button>
+</div>
+<table class="titleDiv" style="background: #B23CF0;">
+    <tr>
+        <th><button class="countDownBtn" onclick='jointWp()' style="background: #f03ce1;">Whatsapp</button></th>
+        <th><button class="countDownBtn" onclick='document.getElementById("agentListPopWindowOverlay").style.display="block";getAgentList()'  style="background: #f03ce1;">Agent list</button></th>
+        <th><button class="countDownBtn" onclick='callAdmin();' style="background: #f03ce1;">Call</button></th>
+        <th><button class="countDownBtn" onclick='document.getElementById("loginDiv").style.display="block";' style="background: #f03ce1;">Login</button></th>
+      </tr>
+  </table>
+
+  <div class="titleDiv" style="background: #B23CF0;">
+    <button class="gameStatusBtn" onclick="loadAvailebleTicket()">CHECK AVAILABLE TICKET</button>
+    </div>
+
+<table class="titleDiv" style="background: #B23CF0;">
+    <tr>
+      <th><button class="countDownBtn" style="background: rgba(32, 24, 24, 0);color: white;">Hours</button></th>
+      <th><button class="countDownBtn" style="background: rgba(32, 24, 24, 0);color: white;">Minutes</button></th>
+      <th><button class="countDownBtn" style="background: rgba(32, 24, 24, 0);color: white;">Seconds</button></th>
+    </tr>
+    <tr>
+        <th><button id="hBtn" class="countDownBtn">00</button></th>
+        <th><button id="mBtn" class="countDownBtn">00</button></th>
+        <th><button id="sBtn" class="countDownBtn">00</button></th>
+      </tr>
+  </table>
+
+  <br>
+  <table class="titleDiv" style="background: #B23CF0;border:3px solid white;border-radius: 10px;">
+    <tr>
+      <th><button class="countDownBtn" id="dateTxt" style="background: rgba(32, 24, 24, 0);color: white;">loading...</button></th>
+      <th><button class="countDownBtn" id="timeTxt" style="background: rgba(32, 24, 24, 0);color: white;">loading...</button></th>
+    </tr>
+  </table>
+
+
+<!----------------------------ticket list div-->
+<!----------------------search my ticket on game-->
+<br>
+<div class="searchMyTicketOnGameDiv" id="allTicketListWindowDiv" style="display: block;background: rgba(255, 166, 0, 0);">
+    <button class="dateTimeBtn" id="allTicketTitleBtn">TICKET FOR COMING GAME</button>
+    <br><br>
+    <div class="searchTicketListDiv" id="allTicketListDiv" >
+<!----------dynamic content ticket list-->
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!---------------------------agent list window-->
+<div class="dividentPopWindowOverlay" id="agentListPopWindowOverlay" style="display: none;">
+    <div class="dividentPopWindow" style="overflow-y: scroll;">
+
+        <button class="xBtn" onclick='document.getElementById("agentListPopWindowOverlay").style.display="none";'>X</button>
+        <button class="dateTimeBtn">AGENT LIST</button>
+      
+            
+            <div class="dividentDiv" id="agentListDiv" style="background: rgba(0,0,0,0);">
+                <!--------dynamic content-->
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<!-------------------------booking dashboard overlay-->
+<div class="centralNumOverlayDiv" id="bookingDashboardOverlayDiv" style="display: none;">
+    <div class="bookingDiv" style="background: rgb(218, 30, 255);">
+        <button class="titleBtn" style="background: rgb(125, 0, 141);">Booking dashboard</button>
+        <button class="xBtn2" onclick='document.getElementById("bookingDashboardOverlayDiv").style.display="none";'>X</button>
+<input class="inp" id="nameInp" placeholder="Your name"/>
+<input class="inp" type="number" style="display:none;" id="phoneInp" placeholder="Your phone"/>
+<div class="tickeBooktDiv" id="tickeBooktDiv">
+    <!-------------------dynamic content by loadBookingDashbord()-->
+</div>
+<button class="bookBtn" onclick="bookSelectedTkt()">BOOK NOW</button>
+    </div>
+</div>
+
+<!----------------------------notice overlay-->
+<div class="noticeOverlayDiv" id="noticeOverlayDiv" style="background: rgba(0, 0, 0, 0);display: none;">
+    <img class="anounceImg" style="display: none;" src="https://pngimg.com/uploads/american_indian/american_indian_PNG10.png"/>
+    <div class="noticeDiv" id="noticeDiv" style="background: rgba(201, 0, 134, 0.9);color: white;">
+        <h1>!!ANOUNCEMENT!!</h1>
+        Tambola is legal game in india except in Assam and Odhisa. <br>
+         Incase if system failure during the game there will be re-game.<br>
+          In case of re-game ticket can not be cancelled.<br>This website is starttambola.com certified and its a legit website.<br> Check legitimacy by clicking  <a href="https://oncserver1.xyz/onlinetambola.xyz/bumper/checkLegitimacy.php">here</a><br>
+    <button class="iAcceptBtn" onclick='document.getElementById("noticeOverlayDiv").style.display="none";iaccept();'>I ACCEPT</button>
+    </div>
+</div>
+
+
+<!--------------------book btn-->
+<button class="bookFloatBtn" id="bookFloatBtn" onclick='document.getElementById("bookingDashboardOverlayDiv").style.display="block";' style="display: none;">BOOK TICKET</button>
+
+<img class="shareImg" onclick="share()" src="https://pngimg.com/uploads/share/small/share_PNG20.png"/>
+
+<div class="loginDiv" id="loginDiv" style="display: none;">
+    <button class="titleBtn">Select login type</button>
+    <button class="inp" onclick='window.location="https://oncserver1.xyz/onlinetambola.xyz/Ui/adminUi";'>Login as admin</button>
+    <button class="inp" onclick='window.location="https://oncserver1.xyz/onlinetambola.xyz/Ui/agentUi";'>Login as agent</button>
+    <button class="inp" onclick='document.getElementById("loginDiv").style.display="none";' style="color: white;background: rgba(0,0,0,0);">Cancell</button>
+</div>
+
+
+<!------------------chat window-->
+<div class="chatDiv" id="chatDiv">
+    <div class="chatHeaderDiv" style="background: rgb(255, 0, 221);width: 100%;" onclick='closedChatDiv()'>
+    <button class="chatBtn" id="closedChatBtn" >X</button>
+<div class="chatTitleTxt" >LIVE CHAT</div>
+</div>
+
+<div class="chatListDiv" id="chatListDiv" style="background: rgb(110, 3, 96);">
+    <!------dynamic content-->
+</div>
+<div class="chatInpDiv" style="background: rgb(255, 0, 221);">
+    <input class="chatInp" id="chatInp" onkeyup="filter(this.id)" placeholder="Type something..."/>
+    <button class="sendChatBtn" id="sendChatBtn" onclick="sendChat()" style="background: rgb(177, 20, 156);">></button>
+</div>
+</div>
+
+<img class="chatOpenImg" id="chatOpenImg" onclick="openChatDiv()" src="https://oncserver1.xyz/onlinetambola.xyz/Ui/imgAsset/chat.png"/>
+
+
+
+<!---chat id div-->
+<div class="askChatIdWindow" id="askChatIdWindow" style="display: none;">
+    <div class="askChatIdDiv">
+<button class="chatAskXBtn" id="chatAskXBtn" onclick='document.getElementById("askChatIdWindow").style.display="none";'>X</button>
+        <button class="askChatIdTtleBtn" id="askChatIdTtleBtn">Enter your name</button>
+        <input class="askChatIdInp" id="askChatIdInp" onkeyup="filter(this.id)" placeholder="Your name"/>
+        <button class="submitChatIdBtn" id="submitChatIdBtn" onclick="initiatChat()">Start chat</button>
+    </div>
+    
+</div>
+
+
+
+
+
+<!--------------------------------------------JAVASCRIPT-->
+
+<script>
+var callerBlockDiv;
+var gameJson;
+var dateTimeBtn;
+var dateTxt;
+var countDownTxt;
+var timeTxt;
+var hBtn;
+var mBtn;
+var sBtn;
+var callerWindowDiv;
+var calledNumberDisplayDiv;
+var dividentResultDiv;
+var calledNumberDisplayCon;
+var searchTNObyKeyWordInp;
+var gameWindowDiv;
+var searchMyTicketOnGameDiv;
+var searchTicketListDiv;
+var dividentResultListDiv;
+var winnerTnotListPopWindowOverlay;
+var winnerTnoListDiv;
+var agentListDiv;
+var allTicketListWindowDiv;
+var allTicketListDiv;
+var allTicketTitleBtn;
+var tickeBooktDiv;
+var nameInp;
+var phoneInp;
+
+
+
+var titleBtn;
+
+var centralNumOverlayDiv;
+var centralNumBtn;
+
+var closedImgLoaded="no";
+
+var startTkt=1;
+var endTkt=6;
+var bookFloatBtn;
+var reqPreviousBtn;
+var reqNextBtn;
+
+var lastCalledDiv;
+var tenPairCon;
+var singlePairCon;
+
+//chat window
+var chatDiv;
+var closedChatBtn;
+var chatListDiv;
+var chatInp;
+var sendChatBtn;
+var chatOpenImg;
+
+var askChatIdWindow;
+var chatAskXBtn;
+var askChatIdTtleBtn;
+var askChatIdInp;
+var submitChatIdBtn;
+
+//notice anouncement
+var noticeOverlayDiv;
+var noticeDiv;
+
+
+var selectedTkt=new Array();
+
+    window.onload=function(){
+
+        callerBlockDiv=document.getElementById("callerBlockDiv");
+        dateTxt=document.getElementById("dateTxt");
+        countDownTxt=document.getElementById("countDownTxt");
+        timeTxt=document.getElementById("timeTxt");
+        titleBtn=document.getElementById("titleBtn");
+        dateTimeBtn=document.getElementById("dateTimeBtn");
+        hBtn=document.getElementById("hBtn");
+        mBtn=document.getElementById("mBtn");
+        sBtn=document.getElementById("sBtn");
+        callerWindowDiv=document.getElementById("callerWindowDiv");
+        calledNumberDisplayCon=document.getElementById("calledNumberDisplayCon");
+        searchMyTicketOnGameDiv=document.getElementById("searchMyTicketOnGameDiv");
+        searchTNObyKeyWordInp=document.getElementById("searchTNObyKeyWordInp");
+        searchTicketListDiv=document.getElementById("searchTicketListDiv");
+        dividentResultListDiv=document.getElementById("dividentResultListDiv");
+        winnerTnotListPopWindowOverlay=document.getElementById("winnerTnotListPopWindowOverlay");
+        winnerTnoListDiv=document.getElementById("winnerTnoListDiv");
+        agentListDiv=document.getElementById("agentListDiv");
+        allTicketListWindowDiv=document.getElementById("allTicketListWindowDiv");
+        allTicketListDiv=document.getElementById("allTicketListDiv");
+        allTicketTitleBtn=document.getElementById("allTicketTitleBtn");
+        tickeBooktDiv=document.getElementById("tickeBooktDiv");
+        nameInp=document.getElementById("nameInp");
+        phoneInp=document.getElementById("phoneInp");
+        centralNumOverlayDiv=document.getElementById("centralNumOverlayDiv");
+        centralNumBtn=document.getElementById("centralNumBtn");
+        calledNumberDisplayDiv=document.getElementById("calledNumberDisplayDiv");
+        dividentResultDiv=document.getElementById("dividentResultDiv");
+        bookFloatBtn=document.getElementById("bookFloatBtn");
+        reqPreviousBtn=document.getElementById("reqPreviousBtn");
+        reqNextBtn=document.getElementById("reqNextBtn");
+        lastCalledDiv=document.getElementById("lastCalledDiv");
+        tenPairCon=document.getElementById("tenPairCon");
+        singlePairCon=document.getElementById("singlePairCon");
+
+        //chat window
+        chatDiv=document.getElementById("chatDiv");
+        closedChatBtn=document.getElementById("closedChatBtn");
+        chatListDiv=document.getElementById("chatListDiv");
+        chatInp=document.getElementById("chatInp");
+        sendChatBtn=document.getElementById("sendChatBtn");
+        chatOpenImg=document.getElementById("chatOpenImg");
+
+        askChatIdWindow=document.getElementById("askChatIdWindow");
+        chatAskXBtn=document.getElementById("chatAskXBtn");
+        askChatIdTtleBtn=document.getElementById("askChatIdTtleBtn");
+        askChatIdInp=document.getElementById("askChatIdInp");
+        submitChatIdBtn=document.getElementById("submitChatIdBtn");
+
+
+         //load ticket from localstorage
+         var previousTktHtml=localStorage.getItem("loadedTickets");
+        if(previousTktHtml!=null){
+            allTicketListDiv.innerHTML=previousTktHtml;
+        }
+
+      
+
+       
+        
+        noticeOverlayDiv=document.getElementById("noticeOverlayDiv");
+       noticeDiv=document.getElementById("noticeDiv");
+     
+       //init
+       loadNoticeTxt();
+        
+    }
+
+
+    function loadNoticeTxt(){
+
+$.get('https://oncserver1.xyz/onlinetambola.xyz/Ui/userUi/php/getAnnouncementTxt.php',
+{},
+function(data){
+    noticeDiv.innerHTML=' <h1>!!ANOUNCEMENT!!</h1>'+
+     data+
+     '<br>'+
+    '<button class="iAcceptBtn" onclick="iaccept()">I ACCEPT</button>';
+
+    noticeOverlayDiv.style.display="block";
+});
+
+    }
+   
+    function iaccept(){
+        noticeOverlayDiv.style.display="none";
+  //-----------init
+        getGameStatus();
+        getAgentList();
+        searchTicketListbyKeyWord();
+        updateTicket();
+        autoChatInitiate();
+      getChat();
+
+      checkNewAudioAnnouncement();
+setInterval(()=>{
+    checkNewAudioAnnouncement();
+},10000);
+
+    }
+
+    function updateTicket(){
+        setInterval(()=>{
+            searchTicketListbyKeyWord();
+        },5000);
+    }
+
+    function share(){
+        var domain=window.location.href.split("/")[2];
+        window.location="whatsapp://send?phone="+gameStatusJSON.phone+"&text=Hi! friends let play online tambola game on this amazing website "+domain;
+    }
+
+    function getGameStatus(){
+
+        $.get('https://oncserver1.xyz/onlinetambola.xyz/api/gameApi/getGameStatus.php',
+        {},
+        function(data){
+//console.log(data);
+
+gameJson=JSON.parse(data);
+
+var calledNumArr=gameJson.calledNumArry;
+var title=gameJson.title;
+var dateTime=gameJson.dateTime;
+var winners=gameJson.winners;
+var totalTicket=gameJson.totalTicket;
+var soldTicketNumList=gameJson.soldTicketNumList;
+var gameStatus=gameJson.gameStatus;
+
+//set value
+titleBtn.innerHTML=title;
+
+
+//set date and time
+var dateOnly=dateTime.split(" ")[0];
+var timeOnly=dateTime.split(" ")[1]+" "+dateTime.split(" ")[2];
+
+dateTxt.innerHTML=dateOnly;
+timeTxt.innerHTML=timeOnly;
+
+if(gameJson.gameStatus!=localStorage.getItem("gameStatus") && gameJson.gameStatus!=""){
+       if(gameJson.gameStatus=="GAME NOT STARTED"){
+       var audio=new Audio("tambolaCallMp3/please book ticket.mp3");
+                audio.play();
+                localStorage.setItem("gameStatus",gameJson.gameStatus);
+                                                   }
+          }
+
+          
+
+        });
+    }
+
+
+
+function loadAvailebleTicket(){
+    console.log("load available tickets");
+    document.getElementById("bookingDashboardOverlayDiv").style.display="block";
+    $.get('https://oncserver1.xyz/onlinetambola.xyz/Ui/userUi/php/getAvailableTicket.php',
+    {},
+    function(data){
+tickeBooktDiv.innerHTML=data;
+    });
+
+//<button class="callerBlockBtn" id="tnoBtn_'+i+'" onclick="tnoClick('+i+')">'+i+'</button>
+
+
+}
+
+
+function tnoClick(num){
+    var tnoBtn=document.getElementById("tnoBtn_"+num);
+
+    if(tnoBtn.style.background!="yellow"){
+
+        if(tnoBtn.style.background!="blue"){
+selectedTkt[selectedTkt.length]=num;
+tnoBtn.style.background="blue";
+    }else{
+var newSelectedTkt=new Array();
+for(var i=0;i<selectedTkt.length;i++){
+if(selectedTkt[i]!=num){
+newSelectedTkt[newSelectedTkt.length]=selectedTkt[i];
+}
+}
+selectedTkt=newSelectedTkt;
+tnoBtn.style.background="white";
+    }
+
+    console.log(JSON.stringify("selected ticket=>"+selectedTkt));
+    }else{
+        console.log("No book allow");
+    }
+}
+
+
+function bookSelectedTkt(){
+if(nameInp.value.length>0){
+if(selectedTkt.length>0){
+window.location="whatsapp://send?phone="+gameJson.phone+"&text=Hi! i am "+nameInp.value+" and i want to book this tickets "+JSON.stringify(selectedTkt)+" for your upcoming tambola game ";
+}else{
+    alert("please select tickets");
+}
+}else{
+    alert("Please enter your name");
+}
+}
+
+
+function getAgentList(){
+
+
+    $.get('https://oncserver1.xyz/onlinetambola.xyz/Ui/userUi/php/getAgentList.php',
+        {},
+        function(data){
+//console.log(data);
+agentListDiv.innerHTML="";
+var agentArry=JSON.parse(data).data;
+
+for(var i=0;i<agentArry.length;i++){
+agentListDiv.innerHTML=agentListDiv.innerHTML+'<button class="agentNameBtn" id="'+agentArry[i].phone+'" onclick="wp(this.id)">'+agentArry[i].name+'</button>'+
+                '<button class="dividentTnoBtn"></button>';
+}
+
+    });
+}
+
+function wp(phone){
+    var domain=window.location.href.split("/")[2];
+    window.location="whatsapp://send?phone="+phone+"&text=Hi! i have some queries regarding tambola game of "+domain;
+}
+
+
+function jointWp(){
+    window,location=gameJson.wpLink;
+}
+function callAdmin(){
+    window,location="tel:"+gameJson.phone;
+}
+var loadedAllTicket=false;
+function searchTicketListbyKeyWord(){
+
+
+/*
+var num=1;
+    var countDownInvl=setInterval(()=>{
+        num++;
+       if(loadedAllTicket==false){
+        allTicketTitleBtn.innerHTML="Loading tickets..."+num;
+       }
+    },100);
+*/
+
+
+    //load new tickets
+    var html1='<div class="ticketDiv" name="tnoCon_">'+
+    '<br>'+
+    '<div class="ticketInfoDiv" >'+
+        '<button class="tnoBtn">-TNO-</button>'+
+        '<button class="tnoNameBtn">-TNO-:(-name-)</button>'+
+        '<button class="tnoBookBtn" id="clearTnoBtn_-TNO-" onclick="bookThis(this.id)">-BOOK-</button>'+
+    '</div>'+
+    '<div class="tickeBtnCon" >';
+
+
+        html2='   <img style="width: 100%;" src="https://starttambola.com/ticketImg/-src-.png"/>';
+
+var html3=    '</div>'+
+    '<br>'+
+'</div>';
+
+    $.get('https://oncserver1.xyz/onlinetambola.xyz/Ui/userUi/php/searchAllTicket.php',
+        {"html1":html1,"html2":html2,"html3":html3},
+        function(data){
+//console.log(data);
+
+//clearInterval(countDownInvl);
+allTicketTitleBtn.innerHTML="TICKET FOR COMING GAME";
+loadedAllTicket=true;
+
+allTicketListDiv.innerHTML=data;
+localStorage.setItem("loadedTickets",data);
+
+
+        });
+}
+
+
+//--------book this F
+function bookThis(id){
+var tktNo=id.split("_")[1];
+window.location="whatsapp://send?phone="+gameJson.phone+"&text=Hi.... i want to book ticket number "+tktNo;
+}
+
+function tktSelect(id,tno){
+var btn=document.getElementById(id);
+if(btn.style.background!="yellow" && btn.style.background!="rgba(0, 0, 0, 0)"){
+btn.style.background="yellow";
+selectedTkt[selectedTkt.length]=tno;
+console.log(JSON.stringify(selectedTkt));
+}
+}
+
+function book(){
+if(nameInp.value.length>0){
+if(phoneInp.value>0){
+
+if(selectedTkt.length>0){
+window.location="whatsapp://send?phone="+gameStatusJSON.phone+"&text=Hi! I want to buy tambola ticket. By name is "+nameInp.value+" and my phone number is "+phoneInp.value+". My selected tickets are "+JSON.stringify(selectedTkt);
+}else{
+    alert("Please select some ticket");
+}
+
+}else{
+    alert("Please provide phone number!");
+}
+}else{
+    alert("Please provide your name!");
+}
+}
+
+//---------------------------------countdown timer
+
+    setInterval(()=>{
+        if(gameJson!=null && hBtn!=null && mBtn!=null && sBtn!=null){
+            displayCountDown();
+          //  console.log("Coundown fired");
+        }
+        },1000);
+    
+    
+        function displayCountDown(){
+
+    var nowDateTime=new Date().getTime();
+    setDateTime=Date.parse(gameJson.nonFormateDateTime);
+    
+  //console.log(setDateTime-nowDateTime);
+    
+    
+    if(nowDateTime>setDateTime){
+        //donothing-----------------------------
+        hBtn.innerHTML=0;
+       mBtn.innerHTML=0;
+       sBtn.innerHTML=0;
+    }else{
+    
+        var ms=Math.abs(setDateTime-nowDateTime);
+    
+        h=Math.floor(ms/(1000*60*60));
+    
+        var ms=ms-(h*60*60*1000);
+    
+        m=Math.floor(ms/(1000*60));
+    
+        var ms=ms-(m*60*1000);
+    
+        s=Math.floor(ms/(1000));
+        
+       hBtn.innerHTML=h;
+       mBtn.innerHTML=m;
+       sBtn.innerHTML=s;
+
+    
+    
+    }
+    
+    
+    
+    }
+
+
+
+
+
+
+    setInterval(()=>{
+       
+       checkGameStatus();
+   },3000);
+
+
+   function checkGameStatus(){
+       $.get('https://oncserver1.xyz/onlinetambola.xyz/api/gameApi/getGameStatus.php',
+       {},
+       function(data){
+  //  console.log(data);
+var json=JSON.parse(data);
+gameStatusJSON=json;
+gameJson=json;
+
+//console.log(JSON.stringify(gameStatusJSON.winners));
+
+//alert(gameStatusJSON.bookingStatus);
+
+if(gameStatusJSON.gameStatus=="GAME NOT STARTED"){
+
+}else{
+    window.location="home100006.html";
+}
+
+if(gameStatusJSON.bookingStatus=="on"){
+   
+}else{
+   
+    window.location="home100006.html";
+}
+
+if(gameStatusJSON.websiteStatus!="on"){
+    document.body.innerHTML='<img width="100%" src="https://tse2.mm.bing.net/th/id/OIP.hVYORIt3OBFIsZVM1NiFtAHaE8?pid=ImgDet&rs=1"/>';
+closedImgLoaded="yess";
+}else{
+    if(closedImgLoaded=="yess"){
+        location.reload();
+    }
+}
+   
+  
+
+       });
+   }
+
+
+
+   function openChatDiv(){
+        chatDiv.style.transform='scale(1)';
+    chatOpenImg.style.opacity="0"; 
+}
+
+
+function closedChatDiv(){
+    console.log("closed chat div");
+    chatDiv.style.transform='scale(0)';
+    chatOpenImg.style.opacity="1";
+}
+
+
+function sendChat(){
+    var chatId=localStorage.getItem("chatId");
+    if(chatId==null){
+      //ask for login
+      console.log("Chat not initiated. Chat id empty!");
+        askChatIdWindow.style.display="block";
+    }else{  
+        if(chatInp.value.length>0){
+            $.get('https://oncserver1.xyz/onlinetambola.xyz/api/chatApi/chatSend.php',
+    {"chatId":chatId,"msg":chatInp.value},
+    function(data){
+console.log(data);
+
+if(data!="chat not initiated"){
+    var msgList=JSON.parse(data);
+chatListDiv.innerHTML="";
+for(var i=0;i<msgList.length;i++){
+    chatListDiv.innerHTML=chatListDiv.innerHTML+'<div class="textDiv" style="border:0px solid red;"><button class="icon"></button>'+msgList[i].id+':<br>--'+msgList[i].msg+'</div>';
+}
+
+chatInp.value="";
+}else{
+askChatIdWindow.style.display="block";
+}
+    });
+        }
+    }
+
+}
+
+
+setInterval(()=>{
+    getChat();
+},5000);
+function getChat(){
+    console.log("get chat");
+    var chatId=localStorage.getItem("chatId");
+
+            $.get('https://oncserver1.xyz/onlinetambola.xyz/api/chatApi/getChat.php',
+    {},
+    function(data){
+console.log("chat list "+data);
+
+var msgList=JSON.parse(data);
+chatListDiv.innerHTML="";
+for(var i=0;i<msgList.length;i++){
+    chatListDiv.innerHTML=chatListDiv.innerHTML+'<div class="textDiv" style="border:0px solid red;"><button class="icon"></button>'+msgList[i].id+':<br>--'+msgList[i].msg+'</div>';
+}
+    });
+        
+    
+
+}
+
+
+
+function initiatChat(){
+    var chatId=askChatIdInp.value;
+        console.log("The registered id is "+chatId);
+//if its not null then check if its unique
+if(chatId.length>0){
+    $.get('https://oncserver1.xyz/onlinetambola.xyz/api/chatApi/chatInitiat.php',
+    {"chatId":chatId},
+    function(data){
+console.log(data);
+
+if(data!="exist"){
+localStorage.setItem("chatId",data);
+askChatIdWindow.style.display="none";
+sendChat();
+}else{
+alert("This name aready exist. Please enter another name.")
+}
+
+    });
+}else{
+    alert("Please enter your name");
+}
+}
+
+
+function autoChatInitiate(){
+    chatId=localStorage.getItem("chatId");
+    if(chatId!=null){
+        $.get('https://oncserver1.xyz/onlinetambola.xyz/api/chatApi/autoChatInitiate.php',
+    {"chatId":chatId},
+    function(data){
+console.log(data);
+
+    });
+    }
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+    
+    .color{
+    color:rgb(0, 131, 219);
+}
+*{
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;  
+    background: transparent; 
+}
+
+body{
+   /* background-image:url("https://printmeposter.com/blog/wp-content/uploads/2017/05/A-mountains-poster.jpg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background: #B23CF0;
+}
+
+.titleDiv{
+    width: 100%;
+    margin-left: 0%;
+    background: rgb(35, 124, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.countDownBtn{
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    border:0px solid grey;
+    font-weight: bold;
+}
+.titleImgL{
+    position: absolute;
+    width: 150px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.titleImgR{
+    position: absolute;
+    width: 150px;
+    right:10%;
+}
+.bannerImg{
+    width: 100%;
+    margin-left: 0%;
+}
+.gameStatusBtn{
+    width: 100%;
+    background: rgb(134, 2, 134);
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    border:0px solid grey;
+}
+.titleBtn{
+ position: absolute;
+ font-size: 50px;
+ font-weight: bold;
+ border: 0px solid red;
+ width: 50%;
+ margin-left: 41%;
+ margin-top: -470px;
+color: white;
+background: rgba(0, 0, 0, 0);
+}
+.dateImg{
+    width: 50px;
+}
+.timerImg{
+    position: absolute;
+    width: 50px;
+    right: 11%;
+}
+.dateTxt{
+    position: absolute;
+    left: 14%;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    border:0px solid grey;
+    color: rgb(0, 0, 0);  
+}
+.countDownTxt{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    border:0px solid grey;
+    color: rgb(0, 0, 0);  
+}
+.timeTxt{
+    position: absolute;
+    right: 14%;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    border:0px solid grey;
+    color: rgb(0, 0, 0);  
+}
+.dateTimeBtn{
+    display: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:0px solid grey;
+    color: rgb(41, 40, 40);
+   
+}
+.countDownDiv{
+    width: 50%;
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns:auto auto auto ;
+}
+.timeBtn{
+    font-size: 25px;
+    padding: 10px;
+    border: 0px solid grey;
+    margin:3px;
+    font-weight: bold;
+}
+.actionDiv{
+    width: 50%;
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns:auto auto;
+}
+.contactBtn{
+    font-size: 15px;
+    padding: 10px;
+    border: 0px solid grey;
+    margin:3px;
+    font-weight: bold;
+    border-radius: 10px;
+    background: rgb(38, 0, 255);
+    color:white;
+}
+.click1Btn{
+    width: 50%;
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+    padding: 10px;
+    border:5px solid rgb(2, 126, 2);
+    background: rgb(1, 190, 1);
+    margin-left: 25%;
+}
+.callerWindowDiv{
+    display:none;
+}
+.callerBlockDiv{
+    width: 80%;
+    margin-left: 10%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    display: grid;
+    grid-template-columns: auto auto auto auto auto  auto auto auto auto auto ;
+}
+
+
+.callerBlockBtn{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin:5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:2px solid gold;
+    color: black;
+    font-weight: bold;
+}
+.calledNumberDisplayDiv{
+    width: 80%;
+    margin-left: 10%;
+    border:0px solid gold;
+    overflow-x:scroll;
+transform: rotate(180deg);
+}
+.calledNumberDisplayCon{
+white-space: nowrap;
+margin-right: 0px;
+}
+.calledNumBtn{
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+border:0px solid grey;
+box-shadow: 0px 0px 4px purple;
+font-weight: bold;
+margin:5px;
+}
+.searchMyTicketOnGameDiv{
+    width: 80%;
+    margin-left: 10%;
+    background: rgb(173, 0, 136);
+      background-size: cover;
+    background-repeat: no-repeat;
+}
+.searchTNOonGameInp{
+    width: 50%;
+    margin-left: 25%;
+    font-size: 20px;
+    padding: 10px;
+    border:0px solid grey;
+    border-radius: 10px;
+}
+.searchTicketListDiv{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.ticketDiv{
+    width: 100%;
+    margin-left: 0%;
+     background-size: cover;
+    background-repeat: no-repeat;
+}
+.ticketInfoDiv{
+    width: 100%;
+    margin-left: 0%;
+}
+.tnoBtn{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 0px solid grey;
+    background:rgb(212, 0, 255);
+    color: white;
+    box-shadow: 2px 2px 20px rgb(80, 80, 80);
+    display:none;
+}
+.tnoNameBtn{
+    width: 101%;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    border: 0px solid rgb(184, 0, 190);
+    text-align: left;
+    color: white;
+    background:rgb(164, 0, 170);
+}
+.tnoBookBtn{
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    border: 0px solid grey;
+    text-align: left;
+    margin-left: 45%;
+    color: white;
+    background: rgb(0, 163, 54);
+    box-shadow: 2px 2px 20px rgb(80, 80, 80);
+    display: none;
+}
+.tickeBtnCon{
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 5px;
+    background: rgb(255, 34, 163);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    border: 10px solid rgb(225, 0, 255);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgb(80, 80, 80);
+}
+.ticketBtn{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background-size: cover;
+     background-repeat: no-repeat;
+    border:2px solid gold;
+}
+.dividentResultDiv{
+    width: 80%;
+    background:linear-gradient(to right,rgb(143, 124, 15),rgb(204, 204, 7),rgb(138, 118, 6));
+    margin-left: 10%;background-size: cover;
+    background-repeat: no-repeat;
+}
+.dividentDiv{
+    width: 80%;
+    margin-left: 10%;
+    background: rgb(183, 0, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: auto;
+}
+.dividentNameBtn{
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+    border: 5px solid yellow;
+    background: tomato;
+     background-repeat: no-repeat;
+    border:2px solid gold;
+    width: 100%;
+}
+.dividentTnoBtn{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background: rgba(0,0,0,0);
+    border: 5px solid yellow;
+    background-repeat: no-repeat;
+    border:0px solid gold;
+    color:white;
+}
+.dividentViewBtn{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background: red;
+    background-repeat: no-repeat;
+    border:0px solid gold;
+    color:white;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 10px;
+}
+.dividentPopWindowOverlay{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+.dividentPopWindow{
+    margin-top:30px;
+    margin-left:25%;
+    width: 50%;
+    background: rgb(199, 0, 206);
+    border:5px solid blue;
+    height: 80%; background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.winnerPopWindow{
+    margin-top:30px;
+    margin-left:10%;
+    width: 80%;
+    height: 80%; 
+    background: rgb(179, 0, 134);
+    border:5px solid blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.xBtn{
+    font-size: 50px;
+    margin-left: 80%;
+    color: white;
+    border: 0px solid grey;
+    background: rgba(0,0,0,0);
+}
+.agentNameBtn{
+    font-size: 20px;
+    padding: 15px;
+    border: 5px solid yellow;
+    background: rgb(142, 0, 185);
+    color: white;
+    border-radius: 10px;
+}
+.searchTnoBtn{
+    width: 30%;
+    font-size: 20px;
+    padding: 10px;
+    border: 0px solid grey;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-top: 5px;
+    background: rgb(251, 255, 0);
+    color: white;
+}
+.centralNumOverlayDiv{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    transition: all 2s;
+}
+.centralNumBtn{
+position: absolute;
+font-size: 50px;
+width: 200px;
+height: 200px;
+border-radius: 100px;
+border:10px solid rgb(80, 80, 255);
+background: rgb(174, 33, 240);
+background-size: cover;
+background-repeat: no-repeat;
+margin-left: 40%;
+margin-top: 20%;
+font-weight: bold;
+transition: all 2s;
+}
+.bookingDiv{
+    width: 80%;
+    height: 90%;
+    background: rgb(172, 28, 255);
+    border: 5px solid gold;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.inp{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px solid grey;
+    margin-top: 5px;
+}
+.tickeBooktDiv{
+    width: 80%;
+    margin-left: 10%;
+    max-height: 50%;
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin-top: 5px;
+    overflow-y: scroll;
+    background: rgb(255, 34, 163);
+    border:5px solid blue;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.tktBtn{
+    font-size: 20px;
+    font-weight: bold;
+background-size: cover;
+background-repeat: no-repeat;
+padding: 10px;
+border: 3px solid gold;
+}
+.bookBtn{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 15pz;
+    padding: 10px;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    margin-top: 5px;
+    border:0px solid grey;
+    font-weight: bold;
+}
+.xBtn2{
+    font-size: 50px;
+    margin-left: 80%;
+    color: white;
+    border: 0px solid grey;
+    background: rgba(0,0,0,0);
+    position: absolute;
+    right: 10%;
+    top:40px;
+}
+.noticeOverlayDiv{
+    position: fixed;
+    background: rgba(0,0,0,0);
+    left: 0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+}
+
+.noticeDiv{
+    background: rgb(212, 181, 0);
+    border:5px solid blue;
+background-size: cover;
+background-repeat: no-repeat;
+width: 80%;
+height: 50%;
+margin-left: 6%;
+font-weight: bold;
+font-size: 20px;
+text-align: center;
+padding: 50px;
+line-height: 30px;
+margin-top: 30px;
+border-radius: 10px;
+}
+
+.iAcceptBtn{
+    font-size: 20px;
+    border:0px solid grey;
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(82, 82, 82);
+    font-weight: bold;
+}
+
+.bookFloatBtn{
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    border:0px solid grey;
+    background: red;
+    color:white;
+    right:10%;
+}
+.reqBtnDiv{
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 25%;
+}
+.reqBtn{
+    font-size: 20px;
+    padding: 5px;
+background-size: cover;
+background-repeat: no-repeat;
+    font-weight: bold;
+    border-radius: 10px;
+    border:0px solid grey;
+    margin:3px;
+}
+
+.lastCalledDiv{
+    border:0px solid red;
+    margin-left: 10%;
+    width: 80%;
+}
+.tenPairCon{
+   width: 100%;
+   display: grid;
+   grid-template-columns: auto auto auto auto auto  auto auto auto auto auto; 
+}
+.singlePairDiv{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*overlay images*/
+.anounceImg{
+    position: absolute;
+    width: 10%;
+    margin-left: 45%;
+}
+.machatehImgL{
+    width: 18%;
+    position: fixed;
+    left: -4%;
+    top:10px;
+}
+.machatehImgR{
+    width: 18%;
+    position: fixed;
+    right: -4%;
+    top:10px;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.actionImgDiv{
+    margin-left: 30%;
+}
+.actionImgBtn{
+    width: 80px;
+    margin-left: 10px;
+}
+.loginDiv{
+    position: absolute;
+    width: 200px;
+    background: rgb(152, 0, 212);
+    top:250px;
+    right:25%;
+    border-radius: 20px;
+}
+.shareImg{
+    position: fixed;
+    width: 50px;
+    right:10px;
+    bottom: 100px;
+}
+
+/*chat css*/
+.chatDiv{
+    width: 50%;
+    height: 300px;
+    background:rgba(1, 50, 90, 0.8);
+    border-radius:30px;
+    position: fixed;
+    right:20px ;
+    bottom: 20px;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: all 0.5s;
+}
+.chatHeaderDiv{
+    height: 50px;
+    border-radius: 10px;
+}
+.chatTitleTxt{
+    position: absolute;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    margin-top: -50px;
+}
+.chatBtn{
+    width: 50px;
+    border-radius: 50px;
+    border:0px solid grey;
+    background:yellow;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.chatListDiv{
+    width: 100%;
+    height: 200px;
+    border:0px solid red;
+    overflow-y: scroll;
+    transform: rotate(180deg);
+}
+.textDiv{
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    width: auto;
+    color: white;
+    margin-top: 5px;
+    transform: rotate(180deg);
+}
+
+.icon{
+    width: 10px;
+    height:10px;
+    border-radius: 5px;
+    background: red;
+    color: white;
+    border: 0px solid grey;
+}
+.chatInpDiv{
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    width: auto;
+    color: white;
+    margin-top: 5px;
+    border: 0px solid grey;
+}
+.chatInp{
+    width: 90%;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    border:0px solid grey;
+}
+.sendChatBtn{
+    width: 30px;
+    height:30px;
+    border-radius: 15px;
+    border:0px solid grey;
+    background: rgb(97, 97, 255);
+    font-size: 15px;
+    font-weight: bold;
+    color:white;
+}
+.chatOpenImg{
+    width: 50px;
+    position: fixed;
+    right:10px ;
+    bottom: 10px;
+    transition:all 0.5s;
+}
+.askChatIdWindow{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.8);
+    z-index: 3;
+}
+.askChatIdTtleBtn{
+    width: 100%;
+    border:0px solid grey;
+    background: rgba(0,0,0,0);
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+}
+.askChatIdDiv{
+    width: 50%;
+    height: 300px;
+    background: rgb(0, 47, 255);
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 25%;
+}
+.askChatIdInp{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    border:0px solid grey;
+    margin-top: 10px;
+}
+.submitChatIdBtn{
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    border:0px solid grey;
+    margin-top: 10px;
+    background: red;
+    color:white;
+}
+.chatAskXBtn{
+    border:0px solid grey;
+    background: rgb(0, 47, 255);
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) { 
+
+    .titleDiv{
+    width: 100%;
+    margin-left:0%;
+   
+}
+.titleBtn{
+    font-size: 45px;
+    width: 50%;
+   margin-top: -310px;
+}
+.bannerImg{
+    width: 100%;
+    margin-left: 0%;
+}
+.gameStatusBtn{
+    width: 100%;
+    background: rgb(134, 2, 134);
+    font-size: 50px;
+    color: white;
+    padding: 30px;
+    border:0px solid grey;
+}
+.countDownBtn{
+    width: 100%;
+    font-size: 35px;
+    padding: 15px;
+    border:0px solid grey;
+    font-weight: bold;
+}
+.titleImgL{
+    position: absolute;
+    width: 150px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.titleImgR{
+    position: absolute;
+    width: 150px;
+    right:1%;
+}
+.dateImg{
+    width: 80px;
+}
+.timerImg{
+    position: absolute;
+    width: 80px;
+    right: 2%;
+}
+.dateTxt{
+    position: absolute;
+    left: 8%;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    border:0px solid grey;
+    color: rgb(0, 0, 0);  
+}
+.countDownTxt{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    border:0px solid grey;
+    color: rgb(0, 0, 0);  
+}
+.timeTxt{
+    position: absolute;
+    right: 10%;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    border:0px solid grey;
+    color: rgb(0, 0, 0);  
+}
+.dateTimeBtn{
+    width: 100%;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+  background:rgba(0,0,0,0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:0px solid grey;
+    color: white;
+   
+}
+.countDownDiv{
+    width: 50%;
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns:auto auto auto ;
+}
+.timeBtn{
+    font-size: 55px;
+    padding: 10px;
+    border: 0px solid grey;
+    margin:3px;
+    font-weight: bold;
+}
+.actionDiv{
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns:auto auto;
+}
+.contactBtn{
+    font-size: 35px;
+    padding: 10px;
+    border: 0px solid grey;
+    margin:3px;
+    font-weight: bold;
+    border-radius: 10px;
+    background: rgb(38, 0, 255);
+    color:white;
+}
+.click1Btn{
+    width: 60%;
+    font-size: 40px;
+    color:white;
+    font-weight: bold;
+    padding: 30px;
+    border:5px solid rgb(2, 126, 2);
+    background: rgb(1, 190, 1);
+    margin-left: 20%;
+}
+.callerBlockDiv{
+    width: 100%;
+    margin-left: 0%; 
+    display: grid;
+    grid-template-columns: auto auto auto auto auto  auto auto auto auto auto ;
+}
+
+
+.callerBlockBtn{
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    margin:5px;
+    background-size: cover;
+    border:2px solid gold;
+    color: black;
+    font-weight: bold;
+}
+.calledNumberDisplayDiv{
+    width: 100%;
+    margin-left: 0%;
+    border:0px solid gold;
+    overflow-x:scroll;
+transform: rotate(180deg);
+}
+.calledNumberDisplayCon{
+white-space: nowrap;
+margin-right: 0px;
+}
+.calledNumBtn{
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+box-shadow: 0px 0px 4px purple;
+font-weight: bold;
+margin:5px;
+}
+.searchMyTicketOnGameDiv{
+    width: 100%;
+    margin-left: 0%;
+}
+.searchTNOonGameInp{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 30px;
+    padding: 20px;
+    border:0px solid grey;
+    border-radius: 10px;
+}
+.ticketDiv{
+    width: 100%;
+    margin-left: 0%;
+}
+.searchTicketListDiv{
+    display: grid;
+    grid-template-columns: auto;
+}
+.ticketInfoDiv{
+    width: 90%;
+    margin-left: 4%;
+}
+.tnoBtn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 35px;
+    font-weight: bold;
+    border: 0px solid grey;
+    color: white;
+}
+.tnoNameBtn{
+    width: 105%;
+    border-radius: 5px;
+    font-size: 35px;
+    padding: 10px;
+    font-weight: bold;
+    border: 0px solid grey;
+    text-align: left;
+    color: white;
+}
+.tnoBookBtn{
+    border-radius: 5px;
+    font-size: 35px;
+    padding: 10px;
+    font-weight: bold;
+    border: 0px solid grey;
+    text-align: left;
+    margin-left: 10%;
+    color: white;
+}
+.tickeBtnCon{
+    width: 90%;
+    margin-left: 4%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    margin-top: 5px;
+}
+.ticketBtn{
+    font-size: 35px;
+    padding: 15px;
+    font-weight: bold;
+    background-size: cover;
+    border:5px solid gold;
+}
+.dividentResultDiv{
+    width: 100%;
+    margin-left: 0%;
+}
+.dividentDiv{
+    width: 100%;
+    margin-left: 0%;
+    display: grid;
+    grid-template-columns: auto;
+}
+.dividentNameBtn{
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+    border:2px solid gold;
+}
+.dividentTnoBtn{
+    font-size: 40px;
+    padding: 10px;
+    font-weight: bold;
+    background: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    border:0px solid gold;
+}
+.dividentViewBtn{
+    font-size: 40px;
+    padding: 10px;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    border:0px solid gold;
+    color:white;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 10px;
+}
+.dividentPopWindowOverlay{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+.dividentPopWindow{
+    margin-top:30px;
+    margin-left:4%;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+}
+.winnerPopWindow{
+    margin-top:30px;
+    margin-left:4%;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+.xBtn{
+    font-size: 50px;
+    margin-left: 80%;
+    color: white;
+    border: 0px solid grey;
+    background: rgba(0,0,0,0);
+}
+.agentNameBtn{
+    font-size: 50px;
+    height:200px;
+    border: 10px solid yellow;
+    color: white;
+    border-radius: 10px;
+}
+.searchTnoBtn{
+    width: 50%;
+    font-size: 30px;
+    padding: 20px;
+    border: 0px solid grey;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-top: 5px;
+    color: white;
+}
+.centralNumOverlayDiv{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    transition: all 2s;
+}
+.centralNumBtn{
+position: absolute;
+font-size: 50px;
+width: 400px;
+height: 400px;
+border-radius: 200px;
+border:10px solid rgb(80, 80, 255);
+background-size: cover;background-repeat: no-repeat;
+margin-left: 30%;
+font-weight: bold;
+transition: all 2s;
+}
+.bookingDiv{
+    width: 90%;
+    height: 90%;
+    border: 5px solid gold;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+.inp{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 35px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px solid grey;
+    margin-top: 5px;
+}
+.tickeBooktDiv{
+    width: 90%;
+    margin-left: 5%;
+    max-height: 60%;
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto ;
+    margin-top: 5px;
+    overflow-y: scroll;
+}
+.tktBtn{
+    font-size: 30px;
+    font-weight: bold;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.bookBtn{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    margin-top: 5px;
+    border:0px solid grey;
+    font-weight: bold;
+}
+.noticeDiv{
+background-size: cover;
+background-repeat: no-repeat;
+width: 80%;
+height: 60%;
+margin-left: 5%;
+font-weight: bold;
+font-size: 40px;
+text-align: center;
+padding: 50px;
+line-height: 60px;
+margin-top: 40%;
+border-radius: 20px;
+}
+
+.iAcceptBtn{
+    font-size: 40px;
+    padding: 50px;
+    border-radius: 30px;
+}
+.bookFloatBtn{
+    font-size: 40px;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 30px;
+    border:0px solid grey;
+    color:white;
+    right:5%;
+}
+.reqBtnDiv{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 10%;
+}
+.reqBtn{
+    font-size: 30px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    border:0px solid grey;
+    margin:3px;
+}
+.lastCalledDiv{
+    border:0px solid red;
+    margin-left: 0%;
+    width: 100%;
+}
+
+
+/*overlay images*/
+.anounceImg{
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+}
+.machatehImgL{
+    width: 30%;
+    position: fixed;
+    left: -4%;
+    top:20%;
+}
+.machatehImgR{
+    width: 30%;
+    position: fixed;
+    right: -4%;
+    top:20%;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.actionImgDiv{
+    margin-left: 0%;
+}
+.actionImgBtn{
+    width: 215px;
+    margin-left: 10px;
+}
+.loginDiv{
+    position: absolute;
+    width: 400px;
+    top:350px;
+    right:5%;
+    border-radius: 20px;
+}
+.shareImg{
+    position: fixed;
+    width: 100px;
+    right:10px;
+    bottom: 200px;
+}
+
+/*chat css*/
+.chatDiv{
+    width: 60%;
+    height: 60%;
+    border-radius:30px;
+    position: fixed;
+    right:20px ;
+    bottom: 50px;
+}
+.chatHeaderDiv{
+    height: 100px;
+    border-radius: 10px;
+}
+.chatTitleTxt{
+    position: absolute;
+    font-size: 35px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    margin-top: -50px;
+}
+.chatBtn{
+    width: 100px;
+    border-radius: 50px;
+    border:0px solid grey;
+    background: rgb(128, 128, 128);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    background: yellow;
+}
+.chatListDiv{
+    width: 100%;
+    height: 75%;
+    border:0px solid red;
+    overflow-y: scroll;
+    transform: rotate(180deg);
+    margin-top: 10px;
+}
+.textDiv{
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 35px;
+    width: auto;
+    color: white;
+    margin-top: 5px;
+    transform: rotate(180deg);
+}
+
+.icon{
+    width: 20px;
+    height:20px;
+    border-radius: 10px;
+    background: red;
+    color: #ffffff;
+    border: 0px solid grey;
+}
+.chatInpDiv{
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+    width: auto;
+    color: white;
+    margin-top: 0px;
+    border: 0px solid grey;
+}
+.chatInp{
+    width: 80%;
+    font-size: 35px;
+    padding: 10px;
+    border-radius: 20px;
+    border:0px solid grey;
+}
+.sendChatBtn{
+    width: 80px;
+    height:80px;
+    border-radius: 40px;
+    border:0px solid grey;
+    background: rgb(97, 97, 255);
+    font-size: 35px;
+    font-weight: bold;
+    color:white;
+}
+.chatOpenImg{
+    width: 100px;
+    position: fixed;
+    right:10px ;
+    bottom: 10px;
+}
+
+.askChatIdWindow{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.8);
+    z-index: 3;
+}
+.askChatIdTtleBtn{
+    width: 100%;
+    border:0px solid grey;
+    background: rgba(0,0,0,0);
+    font-size: 50px;
+    color:white;
+    font-weight: bold;
+}
+.askChatIdDiv{
+    width: 80%;
+    height: 500px;
+    background: rgb(0, 47, 255);
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+.askChatIdInp{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    font-size: 35px;
+    padding: 15px;
+    border:0px solid grey;
+    margin-top: 10px;
+}
+.submitChatIdBtn{
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10px;
+    font-size: 35px;
+    padding: 10px;
+    border:0px solid grey;
+    margin-top: 30px;
+    background: red;
+    color:white;
+}
+.chatAskXBtn{
+    border:0px solid grey;
+    background: rgb(0, 47, 255);
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+}
+</style>

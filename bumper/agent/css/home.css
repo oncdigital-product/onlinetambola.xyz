@@ -1,0 +1,379 @@
+  .color{
+    color:rgb(0, 131, 219);
+}
+*{
+    outline: none;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+body{
+    background: fixed;
+    background-image: url("https://oncserver1.xyz/onlinetambola.xyz/Ui/imgAsset/wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.gameSettingDiv{
+    width: 80%;
+    background: rgb(11, 11, 114);
+    margin-left: 10%;
+}
+.titleBtn{
+    width: 100%;
+    border: 0px solid grey;
+    font-size: 30px;
+    padding: 10px;
+    color:white;
+    background: rgba(0,0,0,0);
+}
+.gameSettingTable{
+    width: 80%;
+    margin-left: 10%;
+}
+.tableInp{
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    border: 0px solid grey;
+    font-weight: bold;
+}
+.tableCheckbox{
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+}
+.clickBtn{
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: 0px solid grey;
+    margin:3px;
+}
+.popWin1{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0px;
+    left:0px;
+    overflow-y:scroll;
+}
+.win1{
+    width: 80%;
+    background:blue;
+    margin-top: 30px;
+    margin-left:10%;
+    border-radius: 10px;
+
+}
+.gamePopDiv{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0px;
+    left:0px;
+}
+
+.gameDiv{
+    position: fixed;
+    width: 80%;
+    background:blue;
+    margin-top: 30px;
+    margin-left:10%;
+    border-radius: 10px;
+    height: 85%;
+
+}
+.numBlockDiv{
+    width: 50%;
+    margin-left: 25%;
+    border: 10px solid silver;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto ;
+
+}
+.numBtn{
+    font-size: 15px;
+}
+.ticketBlockDiv{
+    width: 80%;
+    border:3px solid white;
+    margin-left: 10%;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    max-height: 45%;
+    overflow-y:scroll ;
+}
+.bookInpDiv{
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.ticketBlockBtn{
+    font-size: 15px;
+    padding: 5px;
+    background:white;
+    font-weight: bold;
+    border:2px solid silver;
+}
+.bookBtn{
+    width:80%;
+    font-size: 15px;
+    padding: 10px;
+    border: 0px solid grey;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.runBtn{
+    width: 80%;
+    font-size: 40px;
+    font-weight: bold;
+    height: 100px;
+    border-radius: 10px;
+    background: red;
+    color:white;
+    margin-left: 10%;
+    margin-top: 10px;
+    border:0px solid grey;
+}
+.runGameTable{
+    width: 52%;
+    margin-left: 25%;
+}
+.loginOverlayDiv{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.loginInpCon{
+    width: 50%;
+    height: 50%;
+    background: rgb(0, 197, 223);
+    border: 10px solid rgb(12, 12, 202);
+    margin-left: 25%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.agentInp{
+    width: 80%;
+    font-size: 18px;
+    padding: 10px;
+    border: 0px solid grey;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+.bookFloatBtn{
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    border:0px solid grey;
+    background: red;
+    color:white;
+    right:10%;
+}
+.smallTitleBtn{
+    border: 0px solid grey;
+    background: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.btnConDiv{
+    width: 80%;
+    border-radius: 20px;
+    border: 3px solid white;
+    margin-left: 10%;
+    overflow: auto;
+  white-space: nowrap;
+}
+.roundBtn{
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin:3px;
+    background: white;
+    border: 0px solid grey;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) { 
+    .gameSettingDiv{
+    width: 90%;
+    background: rgb(11, 11, 114);
+    margin-left: 5%;
+}
+.titleBtn{
+    width: 100%;
+    border: 0px solid grey;
+    font-size: 50px;
+    padding: 10px;
+    color:white;
+    background: rgba(0,0,0,0);
+}
+.gameSettingTable{
+    width: 90%;
+    margin-left: 5%;
+}
+.tableInp{
+    width: 100%;
+    font-size: 25px;
+    padding: 10px;
+    border: 0px solid grey;
+    font-weight: bold;
+}
+.tableCheckbox{
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+}
+.clickBtn{
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: 0px solid grey;
+    margin:3px;
+}
+.gameDiv{
+    position: fixed;
+    width: 80%;
+    background:blue;
+    margin-top: 30px;
+    margin-left:10%;
+    border-radius: 10px;
+
+}
+.numBlockDiv{
+    width: 80%;
+    margin-left: 10%;
+    border: 20px solid silver;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto ;
+
+}
+.numBtn{
+    font-size: 35px;
+}
+
+.bookInpDiv{
+    width: 90%;
+    margin-left: 5%;
+    grid-template-columns: auto;
+}
+.ticketBlockDiv{
+    width: 90%;
+    border:3px solid white;
+    margin-left: 5%;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    overflow-y:scroll ;
+    max-height: 60%;
+}
+.ticketBlockBtn{
+    font-size: 30px;
+    padding: 10px;
+    background:white;
+    font-weight: bold;
+    border:2px solid silver;
+}
+.bookBtn{
+    width:90%;
+    font-size: 35px;
+    padding: 10px;
+    border: 0px solid grey;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.runGameTable{
+    width: 85%;
+    margin-left: 10%;
+}
+.loginOverlayDiv{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.loginInpCon{
+    width: 80%;
+    height: 50%;
+    background: rgb(0, 197, 223);
+    border: 10px solid rgb(12, 12, 202);
+    margin-left: 10%;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.agentInp{
+    width: 80%;
+    font-size: 38px;
+    padding: 20px;
+    border: 0px solid grey;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+.bookFloatBtn{
+    font-size: 40px;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 30px;
+    border:0px solid grey;
+    color:white;
+    right:5%;
+}
+.smallTitleBtn{
+    border: 0px solid grey;
+    background: rgba(0, 0, 0, 0);
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.btnConDiv{
+    width: 90%;
+    border-radius: 20px;
+    border: 3px solid white;
+    margin-left: 5%;
+}
+.roundBtn{
+    border-radius: 20px;
+    width: 90px;
+    height: 50px;
+    font-size: 35px;
+    margin:5px;
+    background: white;
+    border: 0px solid grey;
+}
+
+
+}
